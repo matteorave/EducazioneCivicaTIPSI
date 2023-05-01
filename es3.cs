@@ -1,16 +1,17 @@
-            //esercizio1 
-            int n = 0;
-            string s = " ";
+static void es3
+                {
+                int n = 0;
+            string s = "";
             string alfabeto = "abcdefghijklmnopqrstuvwxyz";
-            string risultato = "";
+            int risultato = 0;
             foreach (char c in s)
             {
                 int posizione = alfabeto.IndexOf(c);
                 if (posizione >= 0)
                 {
-                    posizione = (posizione + n) % alfabeto.Length;
+                    posizione = posizione % alfabeto.Length;
 
-                    risultato += alfabeto[posizione];
+                    risultato += posizione;
                 }
                 else
                 {
@@ -19,3 +20,5 @@
 
                 }
             }
+            risultato = risultato * n; 
+                }
